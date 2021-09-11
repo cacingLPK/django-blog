@@ -6,35 +6,13 @@
         <header>
             <h1 align='center'><a href="">Judul blog</a></h1>
         </header>
+    {% for post in posts %}
         <article>
-            <time>published: 10.09.2021 at 14:31</time>
-            <h2><a href="">post pertama</a></h2>
-            <p>
-                sal;fkasdflksdlflk;s;lkaf;adsfksdklskdfskfklskldfkljsjkfsjf
-                sdfjklsdjlfksjlkdfjklsjflkjsjfjskfjlksklfkljdklfjskldjflksjfjswheuihuehwuiohowfsdf
-                sdfajsfjkashfjsdhjkfhjskdhfjkhsjkdfhjkshdjkfsjkhfsdfjhdsfksajfkljakjkjallkjaiajdfdya
-                fskldfjksdljfsdf.
-            </p>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </article>
-        <article>
-            <time>published: 10.09.2021 at 14:31</time>
-            <h2><a href="">post kedua</a></h2>
-            <p>
-                sal;fkasdflksdlflk;s;lkaf;adsfksdklskdfskfklskldfkljsjkfsjf
-                sdfjklsdjlfksjlkdfjklsjflkjsjfjskfjlksklfkljdklfjskldjflksjfjswheuihuehwuiohowfsdf
-                sdfajsfjkashfjsdhjkfhjskdhfjkhsjkdfhjkshdjkfsjkhfsdfjhdsfksajfkljakjkjallkjaiajdfdya
-                fskldfjksdljfsdf.
-            </p>
-        </article>
-        <article>
-            <time>published: 10.09.2021 at 14:31</time>
-            <h2><a href="">post ketiga</a></h2>
-            <p>
-                sal;fkasdflksdlflk;s;lkaf;adsfksdklskdfskfklskldfkljsjkfsjf
-                sdfjklsdjlfksjlkdfjklsjflkjsjfjskfjlksklfkljdklfjskldjflksjfjswheuihuehwuiohowfsdf
-                sdfajsfjkashfjsdhjkfhjskdhfjkhsjkdfhjkshdjkfsjkhfsdfjhdsfksajfkljakjkjallkjaiajdfdya
-                fskldfjksdljfsdf.
-            </p>
-        </article>
+    {% endfor %}
     </body>
+    
 </html>
